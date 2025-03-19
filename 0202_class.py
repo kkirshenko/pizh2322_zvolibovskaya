@@ -32,11 +32,11 @@ class Snow:
     def __call__(self, n: int):
         self.__count = n
 
-    # Метод для получения количества снежинок (геттер)
+    # Метод для получения количества снежинок
     def get_count(self) -> int:
         return self.__count
 
-    # Метод для установки количества снежинок (сеттер)
+    # Метод для установки количества снежинок 
     def set_count(self, count: int):
         if count >= 0:
             self.__count = count
