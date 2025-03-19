@@ -1,6 +1,6 @@
 class Snow:
     def __init__(self, count: int):
-        self.__count = count
+        self.__count = count  # Инкапсуляция
 
     # Перегрузка оператора сложения
     def __add__(self, n: int):
