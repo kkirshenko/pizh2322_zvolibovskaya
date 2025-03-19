@@ -65,6 +65,8 @@ snow = snow / 4
 print(snow)  # Snowflakes: 6
 
 print(snow.makeSnow(3))
+# ***
+# ***
 
 snow(10)  # Вызов объекта как функции
 print(snow)  # Snowflakes: 10
