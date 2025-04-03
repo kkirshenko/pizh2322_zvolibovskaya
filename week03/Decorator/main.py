@@ -1,0 +1,23 @@
+def format_float_return(func):               # Объявляем функцию-декоратор с именем format_float_return, которая принимает другую функцию (func).
+    def wrapper():   
+        result = func()                      # Внутри декоратора определяем вспомогательную функцию wrapper, которая будет "оборачивать" оригинальную функцию.
+        if isinstance(result, float):        # Вызываем оригинальную функцию (func) и сохраняем её результат в переменную result.
+            return round(result, 2)
+        else:
+            return result                    # Проверяем тип возвращаемого значения
+
+    return wrapper
+
+
+@format_float_return                         # Декоратор @format_float_return применяется к функции get_float_number.
+def get_float_number():
+    return 3.14                              # Функция возвращает число с плавающей точкой.
+
+
+@format_float_return                         # Декоратор применяется к функции, возвращающей целое число.
+def get_integer_number():
+    return 20
+
+
+print(get_float_number())
+print(get_integer_number())
